@@ -18,6 +18,14 @@ public class Employee {
 	int total_sales;
 	
 	public static Set<Employee> employeeList = new HashSet<Employee>();
+	
+	public Employee(String name, String address, String nin, String iban, double salary) {
+		this.employee_name = name;
+		this.address = address;
+		this.ni_number = nin;
+		this.iban_number = iban;
+		this.starting_salary = salary;
+	}
 
 	public int getEmployee_number() {
 		return employee_number;
