@@ -12,12 +12,7 @@
 		class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
 		<property name="templateLoaderPath" value="/WEB-INF/views/"></property>
 	</bean>
-	<bean id="worldMapper"
-		class="org.mybatis.spring.mapper.MapperFactoryBean">
-		<property name="mapperInterface" value="mvc_data.IWorldMapper">
-		</property>
-		<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
-	</bean>
+	
 	
 	<bean id="fmtResolver"
 		class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
