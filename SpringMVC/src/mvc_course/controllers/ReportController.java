@@ -56,14 +56,14 @@ public class ReportController {
             	}
             }
             
-            m.addAllAttributes(employees);
+            m.addAttribute("employees", employees);
             
         }catch (Exception e){
             System.out.println(e.getMessage());
         }
         
        
-        return "employeesPerBuReport";
+        return "EmployeesPerBuReport";
         
     }
 

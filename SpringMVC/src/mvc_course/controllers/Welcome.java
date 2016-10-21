@@ -22,6 +22,6 @@ public class Welcome {
 	@RequestMapping(value="index.mvc")
 	public String landingPage(Model m){
 		m.addAttribute("msg", "Hello from the controller");
-		return "hello";
+		return "redirect:addEmployee.mvc";
 	}
 }
