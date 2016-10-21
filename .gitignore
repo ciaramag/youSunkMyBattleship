@@ -1,5 +1,13 @@
 *.metadata
+<<<<<<< HEAD
+=======
 *.jar
 *.DS_Store
 .recommenders/
+<<<<<<< HEAD
+SpringMVC/target/classes/.gitignore
+SpringMVC/target/m2e-wtp/web-resources/.gitignore
+>>>>>>> 21dfb767569a5f8a99434edeb80c41e34f868fd8
+=======
 SpringMVC/target/
+>>>>>>> 449b0e29c8ec77b1179004a7eba749df7951f5b4
