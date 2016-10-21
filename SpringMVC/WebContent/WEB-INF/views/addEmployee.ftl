@@ -27,26 +27,26 @@
 <body>
 	<h1>Add Employee</h1>
 	<div>
-	<form  class="col s12" method="post" name="employee" action="addEmployee.mvc">
+	<form  class="col s12" method="post" name="employee" action="submitForm.mvc">
 		<div class="row">
-        <div class="input-field col s6">
-          	<input placeholder="First Name" name="firstName" type="text" class="validate">
-        </div>
-        <div class="input-field col s6">
-          	<input placeholder="Last Name" name="lastName" type="text" class="validate">
+        <div class="input-field col s12">
+          	<input placeholder="Name" name="name" type="text" class="validate">
         </div>
     </div>
       	<div class="row">
-        <div class="input-field col s12">
+        <div class="input-field col s6">
           	<input placeholder="Address" name="address" type="text" class="validate">
+        </div>
+        <div class="input-field col s6">
+          	<input placeholder="Iban Number" name="Iban_number" type="text" class="validate">
         </div>
         </div>
         <div class="row">
         <div class="input-field col s6">
-          	<input placeholder="National Insurance Number" name="nin" type="text" class="validate">
+          	<input placeholder="National Insurance Number" name="Ni_number" type="text" class="validate">
       	</div>
         <div class="input-field col s6">
-          	<input placeholder="Salary" name="salary" type="text" class="validate">
+          	<input placeholder="Salary" name="starting_salary" type="text" class="validate">
         </div>
       	</div>
         <div class="row">

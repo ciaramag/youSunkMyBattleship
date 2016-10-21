@@ -1,5 +1,7 @@
 package mvc_course.models;
 
+import java.util.ArrayList;
+
 // Employee Model, Sean.
 
 import java.util.HashSet;
@@ -16,8 +18,14 @@ public class Employee {
 	int employee_type_id;
 	int commission_rate;
 	int total_sales;
+	private ArrayList<String> projects = new ArrayList<>();
+    private String jobTitle;
 	
 	public static Set<Employee> employeeList = new HashSet<Employee>();
+	
+	public Employee(){
+		
+	}
 	
 	public Employee(String name, String address, String nin, String iban, double salary) {
 		this.name = name;
@@ -25,6 +33,18 @@ public class Employee {
 		this.ni_number = nin;
 		this.iban_number = iban;
 		this.starting_salary = salary;
+	}
+	
+	public String getJobTitle(){
+		return jobTitle;
+	}
+	
+	public void addProject(String proj){
+		this.projects.add(proj);
+	}
+	
+	public void setJobTitle(String jobTitle){
+		this.jobTitle = jobTitle;
 	}
 
 	public int getEmployee_number() {
