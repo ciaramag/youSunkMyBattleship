@@ -28,7 +28,6 @@ public class EmployeeController{
       @RequestMapping(value = "submitForm.mvc")
       public String addEmployee(@ModelAttribute("employee") Employee e) {
           try{
-        	  
         	  if (e.getCommission_rate() == 0 && e.getTotal_sales() == 0) {
         	  
 		          Connection c = dataSource.getConnection();
