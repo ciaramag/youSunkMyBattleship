@@ -1,10 +1,5 @@
 Manifest-Version: 1.0
-<<<<<<< HEAD
 Built-By: ciaram
 Build-Jdk: 1.8.0_101
-=======
-Built-By: liamf
-Build-Jdk: 1.8.0_60
->>>>>>> 21dfb767569a5f8a99434edeb80c41e34f868fd8
 Created-By: Maven Integration for Eclipse
 
