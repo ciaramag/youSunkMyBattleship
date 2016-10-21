@@ -8,7 +8,7 @@ import java.util.Set;
 public class Employee {
 	
 	int employee_number;
-	String employee_name;
+	String name;
 	String address;
 	String ni_number;
 	String iban_number;
@@ -20,7 +20,7 @@ public class Employee {
 	public static Set<Employee> employeeList = new HashSet<Employee>();
 	
 	public Employee(String name, String address, String nin, String iban, double salary) {
-		this.employee_name = name;
+		this.name = name;
 		this.address = address;
 		this.ni_number = nin;
 		this.iban_number = iban;
@@ -35,12 +35,12 @@ public class Employee {
 		this.employee_number = employee_number;
 	}
 
-	public String getEmployee_name() {
-		return employee_name;
+	public String getName() {
+		return name;
 	}
 
-	public void setEmployee_name(String employee_name) {
-		this.employee_name = employee_name;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public String getAddress() {

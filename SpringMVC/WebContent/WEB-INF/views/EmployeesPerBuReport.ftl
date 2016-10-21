@@ -3,10 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <title>Employees per BU</title>
+
+<!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+          
+
 </head>
 <body>
 
-<body>
 <h1>Employees</h1>
 <table>
 <thead>
@@ -19,18 +26,19 @@
 </tr>
 </thead>
 <tbody>
-	<#list Employees as Employee>
-	<tr>
-		<td>${Employee.getName}</td>
-		<td>${Employee.getAddress}</td>
-		<td>${Employee.getNi_number}</td>
-		<td>${Employee.getIban_number}</td>
-		<td>${Emplpyee.getStarting_salary}</td>
-	</tr>
-</#list>	
+
+
+<#list employees as employee>
+			<tr>
+				<td>${employee.name}</td>
+				<td>${employee.address}</td>
+				<td>${employee.ni_number}</td>
+				<td>${employee.iban_number}</td>
+				<td>${employee.starting_salary}</td>
+			</tr>
+		</#list>
 </tbody>
 </table>
-</body>
 
 </body>
 </html>
