@@ -29,15 +29,31 @@ public class EmployeeController{
       public String addEmployee(@ModelAttribute("employee") Employee e) {
           try{
         	  
-          Connection c = dataSource.getConnection();
-          PreparedStatement ps = c.prepareStatement("INSERT INTO Employees" + "(Employee_name, Address, National_insurance_number, Bank_account_IBAN, Starting_salary, Employee_type_id)" + "VALUES (?,?,?,?,?,?)");            
-          ps.setString(1, e.getName());
-          ps.setString(2,  e.getAddress());
-          ps.setString(3,  e.getNi_number());
-          ps.setString(4, e.getIban_number());
-          ps.setDouble(5,  e.getStarting_salary());
-          ps.setInt(6,  1);
-          ps.executeUpdate();
+        	  if (e.getCommission_rate() == 0 && e.getTotal_sales() == 0) {
+        	  
+		          Connection c = dataSource.getConnection();
+		          PreparedStatement ps = c.prepareStatement("INSERT INTO Employees" + "(Employee_name, Address, National_insurance_number, Bank_account_IBAN, Starting_salary, Employee_type_id)" + "VALUES (?,?,?,?,?,?)");            
+		          ps.setString(1, e.getName());
+		          ps.setString(2,  e.getAddress());
+		          ps.setString(3,  e.getNi_number());
+		          ps.setString(4, e.getIban_number());
+		          ps.setDouble(5,  e.getStarting_salary());
+		          ps.setInt(6,  1);
+		          ps.executeUpdate();
+        	  } else {
+        		  System.out.println("r");
+        		  Connection c = dataSource.getConnection();
+		          PreparedStatement ps = c.prepareStatement("INSERT INTO Employees" + "(Employee_name, Address, National_insurance_number, Bank_account_IBAN, Starting_salary, Employee_type_id, Commission_rate, Total_sales)" + "VALUES (?,?,?,?,?,?,?,?)");            
+		          ps.setString(1, e.getName());
+		          ps.setString(2,  e.getAddress());
+		          ps.setString(3,  e.getNi_number());
+		          ps.setString(4, e.getIban_number());
+		          ps.setDouble(5,  e.getStarting_salary());
+		          ps.setInt(6,  3);
+		          ps.setInt(7, e.getCommission_rate());
+		          ps.setInt(8,  e.getTotal_sales());
+		          ps.executeUpdate(); 
+        	  }
           }catch(Exception ex){
               System.out.println(ex.getMessage());
           }
