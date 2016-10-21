@@ -29,7 +29,7 @@ public class EmployeeController{
 	  public String addEmployee(@ModelAttribute("employee") Employee e) {
 		  try{
 		  Connection c = dataSource.getConnection();
-		  PreparedStatement ps = c.prepareStatement("INSERT INTO Employees" + "(name, Address, National_insurance_number, Bank_account_IBAN, Starting_salary, Employee_type_id)" + "VALUES (?,?,?,?,?,?)");	        
+		  PreparedStatement ps = c.prepareStatement("INSERT INTO Employees" + "(Employee_name, Address, National_insurance_number, Bank_account_IBAN, Starting_salary, Employee_type_id)" + "VALUES (?,?,?,?,?,?)");	        
 		  ps.setString(1, e.getName());
 		  ps.setString(2,  e.getAddress());
 		  ps.setString(3,  e.getNi_number());
