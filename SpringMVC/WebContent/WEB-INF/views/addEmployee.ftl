@@ -57,10 +57,10 @@
       </div>
       <div class="row" style="display:none;" id="hide">
           <div class="input-field col s6">
-            	<input placeholder="Commission Rate" name="commisionRate" type="text" class="validate">
+            	<input placeholder="Commission Rate" name="commission_rate" type="text" class="validate">
           </div>
           <div class="input-field col s6">
-            	<input placeholder="Total Sales" name="totalSales" type="text" class="validate">
+            	<input placeholder="Total Sales" name="total_sales" type="text" class="validate">
           </div>
         </div>
       <div class="row">
