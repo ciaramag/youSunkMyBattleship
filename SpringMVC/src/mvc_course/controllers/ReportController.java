@@ -45,7 +45,6 @@ public class ReportController {
                         rs.getString(6)};
                 rows.add(row);
                 }
-            m.addAttribute("rows", rows);
             
             for (String[] row : rows) {
             	Employee e = new Employee(row[1], row[2], row[3], row[4], Double.parseDouble(row[5]));
@@ -56,14 +55,15 @@ public class ReportController {
             	}
             }
             
-            m.addAllAttributes(employees);
+            m.addAttribute("employees", employees);
+
             
         }catch (Exception e){
             System.out.println(e.getMessage());
         }
         
        
-        return "employeesPerBuReport";
+        return "EmployeesPerBuReport";
         
     }
 
